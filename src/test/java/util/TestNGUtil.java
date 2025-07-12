@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pages.PageHome;
 
@@ -20,7 +21,7 @@ public class TestNGUtil {
 
     @Parameters("platform")
     @BeforeTest
-    public void initCapabilities(String platform) throws MalformedURLException {
+    public void initCapabilities(@Optional("Android") String platform) throws MalformedURLException {
         URL url = new URL(" http://127.0.0.1:4723");
         if(platform.equalsIgnoreCase("Android")){
             driver = new AndroidDriver(url,

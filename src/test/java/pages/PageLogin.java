@@ -15,7 +15,7 @@ public class PageLogin extends BasePage{
     @AndroidFindBy(accessibility = "input-password")
     private WebElement tf_password;
 
-    @AndroidFindBy(accessibility = "button-LOGIN\n")
+    @AndroidFindBy(accessibility = "button-LOGIN")
     private WebElement btn_login;
 
     public void fillUserName(String userName){
