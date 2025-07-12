@@ -1,6 +1,7 @@
 package util;
 
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.ios.options.XCUITestOptions;
 
 import java.io.File;
 import java.util.Objects;
@@ -21,5 +22,11 @@ public class CapabilityOptions {
         options.setAppActivity(".MainActivity");
         options.setApp(file.getAbsolutePath());
         return  options;
+    }
+
+    public static XCUITestOptions getIOSCapabilities(){
+        XCUITestOptions options = new XCUITestOptions();
+        //set the configs
+        return options;
     }
 }
